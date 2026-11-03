@@ -13,6 +13,8 @@ import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminRooms from './pages/AdminRooms';
 import AdminPromos from './pages/AdminPromos'; // Added
+import AdminSettings from './pages/AdminSettings';
+
 
 function App() {
   return (
@@ -30,7 +32,9 @@ function App() {
               <Route path="/admin" element={<AdminLogin />} />
               <Route path="/admin/dashboard" element={<AdminDashboard />} />
               <Route path="/admin/rooms" element={<AdminRooms />} />
-              <Route path="/admin/promos" element={<AdminPromos />} /> {/* Added */}
+              <Route path="/admin/promos" element={<AdminPromos />} /> 
+              <Route path="/admin/settings" element={<AdminSettings />} />
+{/* Added */}
             </Routes>
           </main>
 
