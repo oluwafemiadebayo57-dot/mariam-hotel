@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react'; // We'll install this icon library next
+import { Menu, X } from 'lucide-react';
+
+const LOGO_URL = "https://res.cloudinary.com/izxlyyn5/image/upload/v1793678002/photo_6003547764035358116_y.jpg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +13,16 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           
           {/* Logo */}
-          <Link to="/" className="flex flex-col items-center">
-            <span className="text-2xl font-serif tracking-widest text-luxury-gold uppercase">Mariam</span>
-            <span className="text-[10px] tracking-[0.3em] text-white/70 uppercase">Hotel & Bar</span>
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src={LOGO_URL} 
+              alt="Mariam Hotel & Bar Logo" 
+              className="h-12 w-auto object-contain rounded-full"
+            />
+            <div className="flex flex-col">
+              <span className="text-xl font-serif tracking-widest text-luxury-gold uppercase leading-none">Mariam</span>
+              <span className="text-[9px] tracking-[0.3em] text-white/70 uppercase">Hotel & Bar</span>
+            </div>
           </Link>
 
           {/* Desktop Menu */}
